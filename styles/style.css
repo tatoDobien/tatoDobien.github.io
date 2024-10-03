@@ -1,0 +1,1388 @@
+/********
+Definimos tipografías y propiedades básicas del documento
+
+********/
+
+
+
+  @font-face {
+    font-family: "Unbounded",sans-serif;
+    src: url("../assets/fonts/Unbounded.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Figtree",sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  /* definimos el tamaño de tipografía base y la familia tipográfica por defecto */
+html,
+body {
+  font-size: 10px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  margin:0;
+
+}
+* {
+    box-sizing: border-box !important;
+    /* Importante: esto hace que el tamaño de todas las cajas contemple el padding */
+  }
+
+
+  /********
+  Paso 1: Definimos la estructura básica
+  
+  ********/
+/* Barra de navegación superior */
+header {
+  
+  
+  }
+
+  /* Únicamente la portada tendrá un alto excepcional, para que ocupe toda la pantalla:
+  calculamos el total del alto de la pantalla menos lo que mide el header */
+section#portada {
+    height: 100vh;
+  }
+  
+
+  /********
+  Paso 2: Trabajamos nuestro header
+  
+  ********/
+
+  
+  header {
+    position: relative;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 9px 30px;
+    border-radius: 30px;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(203, 203, 203, 0.1); 
+    z-index: 1000; 
+
+  }
+  
+  .navbar img {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .navbar ul li {
+    margin: 0 10px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 200;
+    padding: 10px 15px;
+  }
+  
+  .navbar ul li a:hover {
+    color: #743a27;
+    text-decoration: underline;
+    border-radius: 10px;
+    font-weight: 400;
+  }
+  
+  .navbar ul li a.cta {
+    background-color: #ffffff;
+    color: #380904;
+    border: 2px solid #380904;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  
+  .navbar ul li a.cta:hover {
+    background-color: #2d2522;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  
+  /********
+    Paso 3: Trabajamos nuestra portada
+    
+    ********/
+    section#portada {
+      background-image: url("../assets/img/portada.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: flex-start; 
+      align-items: center;
+      text-align: center;
+      padding: 20px 20px;
+  }
+  
+  section#portada h1 {
+      color: #3B3838;
+      font-size: 38px;
+      font-family: "Unbounded", sans-serif;
+      margin-top: 25%; 
+  }
+      
+      section#portada h4 {
+        margin-top: 2rem;
+        color: #3B3838;
+        font-weight: 200;
+        font-size: x-large;
+        line-height: 3rem;
+        margin: 0; 
+      }
+      
+      div.portada-izquierda .portada-boton {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      
+      div.portada-izquierda .portada-boton a.boton-submit {
+        margin-top: 2rem;
+        background-color: #380904;
+        font-size: 2rem;
+        padding: 1rem 3rem;
+        border-radius: 30px;
+        font-family: 'Figtree';
+        color: #e9e9e9;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 400;
+      }
+      
+      div.portada-izquierda .portada-boton a.boton-submit:hover {
+        background-color: #1b0402;
+        box-shadow: 0px 4px 15px rgba(27, 15, 15, 0.15); /* sombra  */
+        transform: scale(1.05); 
+        transition: transform 0.3s ease; 
+      }
+      
+       /********
+    Paso 4: La sección 1
+    
+    ********/
+    section#que-puede-hacer h2 {
+        padding: 5rem;
+        text-align: center;
+        font-family: 'Unbounded';
+        color: #3B3838;
+        font-size: 30px;
+    }
+
+
+    section#seccion-2 {
+        padding: rem;
+        text-align: center;
+        
+    }
+    
+    .features-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%; /*ancho de la sección */
+        margin: 0 auto; /*ancho de la sección tmbn */
+
+    }
+
+    .feature {
+        text-align: center;
+        max-width: 30%;
+    }
+    
+    .feature img {
+        width: 180px; /* el tamaño de la imagen */
+        height: auto;
+    }
+    
+    .feature h3 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 6px; /* Ajusta este valor según el espacio que desees */
+  }
+    
+    .feature p {
+      font-size: 1.6rem;
+      color: #333;
+      margin-top: 1px; /* Ajusta este valor según el espacio que desees */
+  }
+
+
+/********
+Paso 5: SEPARACIÓN: HILO ROJO
+********/
+section#hilorojo1 img {
+  width: 100%;
+  height: 50%;
+  max-width: 100%; /* hace que la imagen no se desborde del contenedor */
+  display: block; /* evira el espacio blanco abajo de la imagen */
+  margin-top: 50px;
+}
+
+/********
+Paso 6: SECCIÓN CARACTERISTICAS
+********/
+.seccion-caracteristicas {
+  padding: 40px 0;
+  
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* alinea los cosos desde la parte superior */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  margin-top: 60px;
+}
+
+.texto {
+  flex: 1;
+  padding-right: 90px;
+}
+
+.texto h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #3B3838;
+  font-family: 'Unbounded';
+}
+
+.texto p {
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: #3B3838;
+}
+
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
+}
+
+.lista-caracteristicas li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* espacio entre los ítems */
+
+}
+
+.icono-caracteristica {
+  width: 60px;  
+  height: 60px; 
+  margin-right: 15px;
+  flex-shrink: 0; 
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.icono-caracteristica img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.info-caracteristica h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+  margin: 0;
+}
+
+.info-caracteristica p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.imagen {
+  flex: 1;
+  text-align: right;
+  margin-top: 200px;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/********
+Paso 7: SECCIÓN personalizacion
+********/
+
+
+.seccion-personalizacion {
+
+  background-color: transparent;
+
+  
+  background-image: url('../assets/img/fondoPersonalizacion.png');
+  
+ 
+  background-size: cover;
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  padding: 40px 20px;
+  border-radius: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto; 
+  margin-top: 80px;
+
+}
+
+.contenidoPersonalizacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px; 
+}
+
+.textoPersonalizacion {
+  flex: 1;
+  color: white;
+  margin-left: 60px;
+  margin-top: -20px;
+}
+
+.textoPersonalizacion h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Unbounded';
+}
+
+.textoPersonalizacion p {
+  font-size: 21px;
+  line-height: 1.6;
+  margin-bottom: 80px;
+  font-weight: 200;
+  margin-right: 190px;
+}
+
+.boton-contacto {
+  background-color: #FFF1EA;
+  color: #380904;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Figtree';
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+.boton-contacto:hover {
+  background-color: #faf4f4;
+  color: #380904;
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+}
+
+.imagenCelu {
+  flex: 1;
+  max-width: 250px; /* tamaño d imagen */
+  display: flex;
+  justify-content: center;
+  margin-right: 90px;
+  margin-left: 90px;
+}
+
+.imagenCelu img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+  
+/********
+Paso 8: SECCIÓN hilorojo2
+********/
+
+
+section#hilorojo2 img {
+  width: 100%;
+  height: 50%;
+  max-width: 100%; /* hace que la imagen no se desborde del contenedor */
+  display: block; /* evira el espacio blanco abajo de la imagen */
+  margin-top: 20px;
+}
+
+/********
+Paso 9: SECCIÓN testimonios
+********/
+
+.contenedor {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contenedor h1{
+  font-size: 36px;
+  font-family: 'Unbounded';
+  text-align: center;
+  color: #3B3838;
+}
+.contenedor p {
+  text-align: center;
+  font-size: 20px;
+  color: #3B3838;
+  
+}
+
+.testimonios {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+}
+
+.testimonio {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  width: 30%;
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 30%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 30px;
+  
+}
+
+.testimonio img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+  margin-bottom: 0px; /* espacio abajo de la imagen */
+  margin-top: 20px;
+
+}
+
+.testimonio h3 {
+  font-size: 20px;
+  margin: 15px 0 1px;
+  text-align: center;
+  color: #3B3838;
+}
+
+.testimonio p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+}
+
+/* colores de fondo de las cards */
+.testimonio-1 {
+  background-color: #FFC8BE;
+
+}
+
+.testimonio-2 {
+  background-color: #F8EDE5;
+}
+
+.testimonio-3 {
+  background-color: #C5D9E3;
+  font-size: 18px;
+
+}
+/* Imagenes para pantallas grandes */
+
+.testimonio-1 .testimonio-img {
+  content: url('../assets/img/Marina.png');
+}
+
+.testimonio-2 .testimonio-img {
+  content: url('../assets/img/Lucas1.png');
+}
+
+.testimonio-3 .testimonio-img {
+  content: url('../assets/img/Marta.png');
+}
+
+.instagram-link {
+  color: #3B3838;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  font-family: 'Inter' sans-serif;
+}
+
+
+/* fORMULARIO */
+
+
+
+section#seccion-5 {
+  background-image: url("../assets/img/form.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px; 
+  border-radius: 20px; 
+  display: flex;
+  justify-content: left; 
+  align-items: left; 
+  color: #3B3838; 
+  margin: 0 auto;
+  max-width: 90%; 
+  height: 600px;
+  min-height: 100%; 
+  margin-top: 8%;
+}
+
+.formulariop {
+  max-width: 400px; 
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.formulariop h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #3B3838; 
+  text-align: left; 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* para centrar los elementos del formulario */
+}
+
+.controls {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-family: 'Figtree';
+}
+
+textarea#mensaje{
+  height: 90px;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+
+  font-family: 'Figtree';
+  margin-bottom: 20px;
+}
+
+.boton1-submit {
+  padding: 12px;
+  background-color: #BE2C14; 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Figtree';
+  width: 50%; 
+}
+
+.boton1-submit:hover {
+  background-color: #cf5732; 
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+}
+
+.contenedorMapa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 160px;
+  gap: 140px; 
+}
+
+.textoMapa {
+  max-width: 40%; 
+}
+
+.textoMapa h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3B3838;
+  font-family: 'Unbounded';
+}
+
+.textoMapa p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #3B3838;
+  margin-right: 100px;
+}
+
+.munecoGif {
+  margin-top: 0; 
+}
+
+.munecoGif img {
+  width: 600px; 
+  display: block;
+  margin-left: 0;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+
+/* Mapa */
+.mapa {
+  max-width: 50%; 
+  flex-grow: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin-top: 30px;
+}
+
+
+
+/* BOTON FLOTANTE*/
+
+.chat-button {
+  height: 200px;
+  width: 200px;
+  background-image: url("../assets/img/botonFlotante.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000; /* par que este sobre todo*/
+}
+.chat-button:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
+  animation: heartbeat 1.5s infinite;
+
+}
+.chat-button.hidden {
+  display: none;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+
+/* FOOTER*/
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 87%;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column; /* el <h1> y el <a> estan en una columna */
+  align-items: flex-start; 
+}
+
+.footer-content h1 {
+  color: #5a1c15;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Unbounded';
+  margin-bottom: 10px; 
+}
+
+.footer-left a {
+  color: #BE2C14;
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid #BE2C14;
+  color: #2d2522;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 10px; 
+}
+
+.footer-left a:hover {
+  background-color: #BE2C14;
+  color: white;
+}
+.footer-center nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-center a {
+  color: #5a1c15;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-center a:hover {
+  color: #BE2C14;
+}
+
+.footer-right img {
+  max-height: 150px;
+}
+
+.footer-bottom {
+  background-color: #BE2C14;
+  color: #ffffff;
+  padding: 30px 120px;
+  padding-right: 200px; /* paa separar del borde derecho */
+  margin-top: 40px;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  #mobile-menu {
+    display: none; 
+  }
+  
+  .navbar ul {
+    display: flex; 
+    flex-direction: row; 
+    position: static;
+    width: auto;
+  }
+  .contenidoMobile {
+    display: none;
+  }
+}
+
+/* Estilos para pantallas mini */
+@media screen and (max-width: 500px) {
+  .desktop-only {
+    display: none; 
+  }
+  .testimonio img {
+    width: 60px;
+    height: 60px;
+  }
+  .chat-button {
+    display: none;
+  }
+
+  .contenidoPersonalizacion {
+    display: none !important; 
+  }
+  
+  .navbar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: space-between; 
+    transform: none;
+    border-radius: 0;
+    padding: 10px;
+    position: fixed;
+  }
+
+  .navbar img {
+    width: 150px; 
+    margin: 0; 
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .navbar ul {
+    display: none; 
+    flex-direction: column;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: #BE2C14; 
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+
+  #mobile-menu {
+    display: none; 
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 100%;
+    height: 100%; 
+    background-color: #c14431;
+    justify-content: center; 
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    z-index: 1000; 
+    flex-direction: column;
+  }
+
+  #mobile-menu.active {
+    display: flex; 
+  }
+
+  .close-btn {
+    display: none; 
+    background: none;
+    border:none;
+    font-size: 50px;
+    font-weight: 100;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #mobile-menu.active .close-btn {
+    display: block; 
+  }
+
+  #mobile-menu ul {
+    display: flex; 
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    
+  }
+
+  #mobile-menu ul li {
+    margin: 15px 0; 
+    
+  }
+
+  #mobile-menu ul li a {
+    color: #fff; 
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  #mobile-menu ul li a:hover {
+    color: #fff; 
+  }
+
+
+  /********
+portada
+  ********/
+
+section#portada {
+  background-image: url("../assets/img/portadamobile.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+section#portada {
+  padding: 5px 16px;
+  height: 100vh; 
+  justify-content: space-between; 
+  margin-bottom: 0px;
+}
+
+section#portada h1 {
+  font-size: 20px; 
+  margin-top: 40%; 
+  padding: 0 15px;
+}
+
+section#portada h4 {
+  font-size: 18px; 
+  margin-top: 10px; 
+}
+
+div.portada-izquierda .portada-boton {
+  margin-top: auto; 
+  justify-content: center; 
+  width: 100%; 
+}
+
+div.portada-izquierda .portada-boton a.boton-submit {
+  font-size: 1.5rem; 
+  padding: 1rem 3rem;
+}
+
+  /********
+SECCION CARACTERISTICAS
+  ********/
+  
+  section#que-puede-hacer h2 {
+    font-size: 20px;
+    padding: 3rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.features-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature {
+    max-width: 80%;
+    margin-bottom: 4rem; 
+}
+
+.feature img {
+    width: 150px;
+}
+
+.feature h3 {
+    font-size: 2rem;
+}
+
+.feature p {
+    font-size: 1.4rem;
+}
+
+
+ /********
+SECCION CARACTERISTICAS
+********/
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left;
+  margin-top: 30px; 
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.texto {
+  padding-right: 10px;
+  margin-bottom: 8px; 
+}
+
+.lista-caracteristicas li {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  margin-bottom: 30px; 
+}
+
+.icono-caracteristica {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px; 
+}
+
+.info-caracteristica h3 {
+  font-size: 18px;
+  margin-bottom: 5px; 
+}
+.texto h2 {
+  font-size: 20px;
+}
+.texto p{
+font-size: 16px;
+}
+
+.info-caracteristica p {
+  font-size: 16px;
+  margin: 0; 
+}
+
+.imagen {
+  margin-top: 30px; 
+  text-align: left;
+}
+
+.imagen img {
+  border-radius: 8px;
+  width: 100%; 
+}
+.a.boton-contactoMobile{
+  font-weight: 400;
+}
+
+
+  /********
+FOOTER
+  ********/
+
+  footer {
+    height: 45vh;
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%; 
+    margin: 40px; 
+    padding: 0 0; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .footer-left {
+    align-items: flex-start;
+  }
+
+  .footer-content h1 {
+    font-size: 24px;
+  }
+
+  .footer-left a {
+    font-size: 16px; 
+    padding: 8px 16px;
+    margin-top: 15px; 
+  }
+
+  .footer-center nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  .footer-center a {
+    font-size: 16px;
+  }
+
+  .footer-right img {
+    max-height: 100px; 
+    margin-top: 20px;
+  }
+
+  .footer-bottom {
+    padding: 30px;
+    text-align: left;
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+
+    /********
+FOOTER
+  ********/
+
+
+  /********
+Paso 7: SECCIÓN personalizacion
+********/
+
+.seccion-personalizacion {
+  background-image: url("../assets/img/fondoPersonalizacion2.png");
+  display: flex;
+  padding: 15px 0;
+  margin-top: 90px;
+  border-radius: 0;
+  padding: 50px;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.contenidoMobile{
+  display: flex;
+  flex-direction: column; 
+  gap: 0; 
+  align-items: flex-start;
+  width: 100%; 
+  color: #FFFFFF;
+  margin-top: 30px; 
+}
+
+.textoPersonalizacion {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 60px;
+  padding: 0 20px;
+  text-align: flex-start; 
+}
+
+.textoMobile h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: 'Unbounded';
+}
+
+.textoMobile p {
+  font-size: 16px; 
+  line-height: 1.4;
+  margin-bottom: 70px; 
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.boton-contactoMobile {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background-color: #FFF1EA;
+  color: #380904;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Google Sans';
+  font-weight: 200;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.imagenCeluMobile {
+  max-width: 250px; 
+  margin: 0 0; 
+}
+
+.imagenCeluMobile img {
+  width: 100%; 
+  height: auto;
+  border-radius: 20px;
+  align-items: flex-start;
+}
+
+
+/********
+Paso 7: SECCIÓN personalizacion
+********/
+.testimoniosAnsiop{
+  margin-top: 40px;
+
+}
+
+.testimonios {
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 10px;
+}
+.contenedor h1 {
+  font-size: 20px;
+}
+.contenedor p{
+  font-size: 16px;
+}
+
+.testimonio {
+  width: 100%; 
+  margin-bottom: 20px; 
+  padding: 20px; 
+}
+.testimonio-1 .testimonio-img {
+  content: url('../assets/img/Marina.png');
+  margin-top: 0;
+}
+
+.testimonio-2 .testimonio-img {
+  content: url('../assets/img/Lucas1.png');
+  margin-top: 0;
+
+}
+
+.testimonio-3 .testimonio-img {
+  content: url('../assets/img/Marta.png');
+  margin-top: 0;
+
+}
+/********
+SECCIÓN FORM
+********/
+
+section#seccion-5 {
+  background-image: url("../assets/img/formobile.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 10px; 
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.formulariop {
+  max-width: 100%; 
+  margin-left: 0; 
+  padding: 20px;
+}
+
+.formulariop h2 {
+  font-size: 24px; 
+  text-align: start; 
+  margin-bottom: 30px; 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.controls, textarea#mensaje {
+  font-size: 16px;
+  padding: 12px;
+  width: 100%; 
+  margin-bottom: 20px; 
+}
+
+.boton1-submit {
+  width: 60%;
+  font-size: 16px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 32px; 
+  background-color: #be2c14; 
+  color: white;
+  cursor: pointer;
+  margin-top: 20px; 
+}
+
+.boton1-submit:hover {
+  background-color: #c14431; 
+}
+
+
+/* MAPA */
+.contenedorMapa {
+  flex-direction: column; 
+  margin: 50px 50px ; 
+  align-items: left; 
+  gap: 0;
+}
+
+.textoMapa {
+  max-width: 100%; 
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.textoMapa h2 {
+  font-size: 20px; 
+}
+
+.textoMapa p {
+  font-size: 16px; 
+  margin-right: 0; 
+}
+
+.munecoGif {
+  display: none;
+}
+
+.mapa {
+  max-width: 100%;
+  margin-top: 0; 
+}
+
+iframe {
+  height: 300px; 
+  margin-top: 20px; 
+}
+
+}
+
+
